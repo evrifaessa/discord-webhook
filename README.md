@@ -10,6 +10,6 @@ The application is reachable on [discord-webhook.js.org](https://discord-webhook
 Feel free to create pull requests and issues, I'll check them. If you have any questions, reach me on Discord: evrifaessa#5791
 
 For now, here is a short list of what's probably coming in the future:
-[ ] File uploads
-[ ] Dark mode
-[ ] Embeds
+- [ ] File uploads
+- [ ] Dark mode
+- [ ] Embeds
