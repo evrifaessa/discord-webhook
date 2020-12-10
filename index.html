@@ -16,14 +16,12 @@
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="./assets/css/fontawesome.min.css" rel="stylesheet">
-
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
     <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
-
     <style>
       .bd-placeholder-img {
       font-size: 1.125rem;
@@ -66,29 +64,29 @@
             <form class="needs-validation" id="main-form" novalidate>
               <div class="row g-3">
                 <div class="col-12">
-                    <label for="url" class="form-label">Webhook address</label>
-                    <input type="url" class="form-control" id="url" placeholder="https://discord.com/api/webhooks/123/abc" required>
-                    <div class="invalid-feedback">
-                      Please enter a valid URL for your webhook.
-                    </div>
-                  </div>                  
+                  <label for="url" class="form-label">Webhook address</label>
+                  <input type="url" class="form-control" id="url" placeholder="https://discord.com/api/webhooks/123/abc" required>
+                  <div class="invalid-feedback">
+                    Please enter a valid URL for your webhook.
+                  </div>
+                </div>
                 <div class="col-12">
-                    <label for="username" class="form-label">Appearing username</label>
-                    <div class="input-group">
-                      <span class="input-group-text">@</span>
-                      <input type="text" class="form-control" id="username" placeholder="Clyde" required>
-                      <div class="invalid-feedback">
-                        You need to provide a username.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <label for="icon-url" class="form-label">Icon URL</label>
-                    <input type="url" class="form-control" id="icon-url" placeholder="https://cdn.discordapp.com/avatars/123/icon.png" required>
+                  <label for="username" class="form-label">Appearing username</label>
+                  <div class="input-group">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" id="username" placeholder="Clyde" required>
                     <div class="invalid-feedback">
-                      Please enter a valid URL for your webhook's icon.
+                      You need to provide a username.
                     </div>
                   </div>
+                </div>
+                <div class="col-12">
+                  <label for="icon-url" class="form-label">Icon URL</label>
+                  <input type="url" class="form-control" id="icon-url" placeholder="https://cdn.discordapp.com/avatars/123/icon.png" required>
+                  <div class="invalid-feedback">
+                    Please enter a valid URL for your webhook's icon.
+                  </div>
+                </div>
                 <div class="col-12">
                   <label for="message" class="form-label">Message</label>
                   <textarea class="form-control" id="message" onkeyup="updatePreview();" rows="3" placeholder="**Hello!** I'm a webhook." required></textarea>
@@ -112,9 +110,8 @@
           <li class="list-inline-item"><a href="https://github.com/evrifaessa">Developer</a></li>
           <li class="list-inline-item"><a href="https://github.com/evrifaessa/discord-webhook">Source</a></li>
         </ul>
-        </footer>
+      </footer>
     </div>
-    
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/form-validation.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
