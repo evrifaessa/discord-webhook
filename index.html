@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Online client for Discord webhooks</title>
+    <meta name="language" content="en-US">
+    <meta name="author" content="Yağızhan Burak Yakar (evrifaessa), https://github.com/evrifaessa">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A minimal online application to interact with Discord webhooks easily.">
+    <meta name="keywords" content="evrifaessa, webhook, online, client, discord, discordapp">
+    <meta name="title" content="Online client for Discord webhooks">
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="./assets/css/fontawesome.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      }
+      @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+      }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <h2><i class="fab fa-discord"></i><br />Online client for Discord webhook</h2>
+          <p class="lead"><b>Below is an interface that lets you interact with Discord webhooks right in your browser.</b><br />Looking for technical documentation about webhooks? See Discord's official guide <a href="https://discord.com/developers/docs/resources/webhook">here</a>.</p>
+          <a class="github-button" href="https://github.com/evrifaessa/webhook-client" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star evrifaessa/webhook-client on GitHub">Star</a>
+        </div>
+        <div id="alert-placeholder"></div>
+        <div class="row g-3">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted">Preview</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li id="preview-block" class="list-group-item d-flex justify-content-between lh-sm" style="background-color: #222; color: #ffffff!important;">
+                <span class="text-muted" style="color: #ffffff!important"><i class="fas fa-pen"></i> Start writing your message :)</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Webhook details</h4>
+            <form class="needs-validation" id="main-form" novalidate>
+              <div class="row g-3">
+                <div class="col-12">
+                    <label for="url" class="form-label">Webhook address</label>
+                    <input type="url" class="form-control" id="url" placeholder="https://discord.com/api/webhooks/123/abc" required>
+                    <div class="invalid-feedback">
+                      Please enter a valid URL for your webhook.
+                    </div>
+                  </div>                  
+                <div class="col-12">
+                    <label for="username" class="form-label">Appearing username</label>
+                    <div class="input-group">
+                      <span class="input-group-text">@</span>
+                      <input type="text" class="form-control" id="username" placeholder="Clyde" required>
+                      <div class="invalid-feedback">
+                        You need to provide a username.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="icon-url" class="form-label">Icon URL</label>
+                    <input type="url" class="form-control" id="icon-url" placeholder="https://cdn.discordapp.com/avatars/123/icon.png" required>
+                    <div class="invalid-feedback">
+                      Please enter a valid URL for your webhook's icon.
+                    </div>
+                  </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" onkeyup="updatePreview();" rows="3" placeholder="**Hello!** I'm a webhook." required></textarea>
+                  <small id="messageHelp" class="form-text text-muted"><a href="https://support.discord.com/hc/en-us/articles/210298617">Markdown</a> is supported for this field.</small>
+                  <div class="invalid-feedback">
+                    Please enter your message. You can't send a blank webhook.
+                  </div>
+                </div>
+              </div>
+              <hr class="my-4">
+              <button class="w-100 btn btn-primary btn-lg" id="submit-button" type="submit"><i class="fas fa-paper-plane"></i> Send the webhook</button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <a class="github-button" href="https://github.com/evrifaessa/webhook-client" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star evrifaessa/webhook-client on GitHub">Star</a>
+        <p class="mb-1">&copy; 2020, <a href="https://github.com/evrifaessa">evrifaessa</a>.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://github.com/evrifaessa/webhook-client/blob/master/LICENSE">License</a></li>
+          <li class="list-inline-item"><a href="https://github.com/evrifaessa">Developer</a></li>
+          <li class="list-inline-item"><a href="https://github.com/evrifaessa/webhook-client">Source</a></li>
+        </ul>
+        </footer>
+    </div>
+    
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/form-validation.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/discord-markdown.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
