@@ -30,7 +30,7 @@ $('#main-form').on('submit', function(e) {
         },
         success: displayMessage("success", "Successfully passed the message to the webhook."),
         error: function(xhr, status, error) {
-            displayMessage("danger", error || "An unexpected error occurred. You might want to check your browser's console output.<br />If you <a href='https://github.com/evrifaessa/webhook-client/issues'>create an issue</a> about the error, it would be very helpful.");
+            displayMessage("danger", error || "An unexpected error occurred. You might want to check your browser's console output.<br />If you <a href='https://github.com/evrifaessa/discord-webhook/issues'>create an issue</a> about the error, it would be very helpful.");
         }
       });
 });
