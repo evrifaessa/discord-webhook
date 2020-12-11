@@ -27,6 +27,21 @@ $(window).on('load', function() {
     $('.preloader').fadeOut('slow');
 });
 
+/* Lazy loading images */
+let imgs = $("img");
+for(let a=0;a<imgs.length;a++){
+  if ($(a).attr("ref-src")) loadImage(imgs[a]);
+}
+
+function loadImage(elem){
+  let url = $(elem).attr("ref-src");
+  let newImg = new Image();
+  newImg.onload = function(){
+    $(elem).attr("src", url);
+  }
+  newImg.src = url;
+}
+
 $('#main-form').on('submit', function(e) {
     e.preventDefault();
     var url = $('#url').val();
@@ -53,7 +68,16 @@ $('#main-form').on('submit', function(e) {
       });
 });
 
-function updatePreview()
+function updateImagePreview(url)
+{
+    if($("#preview-image").val() !== null && $("#preview-image") !== '') {
+      $("#preview-image").attr("src", "./assets/images/spinner.gif");
+      $("#preview-image").attr("ref-src", url);
+      loadImage($("#preview-image"));
+    }
+}
+
+function updateMarkdownPreview()
 {
     if($("#message").val() !== null && $("#message").val() !== '') {
         $("#preview-block").html(discordMarkdown.toHTML($("#message").val()));
@@ -75,7 +99,7 @@ function fetchPredefined(url)
     cache: false,
     success: function(data){
       if (data["name"]) $("#username").val(data["name"]);
-      if (data["avatar"]) $("#icon-url").val(`https://cdn.discordapp.com/avatars/${data["id"]}/${data["avatar"]}.png`);
+      if (data["avatar"]) $("#icon-url").val(`https://cdn.discordapp.com/avatars/${data["id"]}/${data["avatar"]}.png`) && updateImagePreview(`https://cdn.discordapp.com/avatars/${data["id"]}/${data["avatar"]}.png`);
     }
   });
 }
@@ -86,6 +110,13 @@ function clearURL()
     if($("#url").val() !== null && $("#url").val() !== '') {
         $("#url").val($("#url").val().replace(hostnameRegex, ''));
     }
+}
+
+function handleIconChange()
+{
+  if($("#icon-url").val() !== null && $("#icon-url").val() !== '') {
+    updateImagePreview($("#icon-url").val());
+  }
 }
 
 function displayMessage(type, message)
