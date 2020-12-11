@@ -62,6 +62,24 @@ function updatePreview()
     }
 }
 
+/**
+  * This function will fetch the predefined values from Discord's API.
+  * We'll get the default username, the default icon, and fill in the values of inputs with those information.
+ */
+function fetchPredefined(url)
+{
+  if (!url) return displayMessage("danger", "In order to fetch values from Discord, you first need to enter the URL.");
+
+  $.ajax({
+    url: url,
+    cache: false,
+    success: function(data){
+      if (data["name"]) $("#username").val(data["name"]);
+      if (data["avatar"]) $("#icon-url").val(`https://cdn.discordapp.com/avatars/${data["id"]}/${data["avatar"]}.png`);
+    }
+  });
+}
+
 function clearURL()
 {
   const hostnameRegex = /(.*\/\/|)(canary\.|)discord(app|)\.com\/api\/webhooks\//gm;
@@ -80,4 +98,8 @@ $("#preview-label").click(function() {
       scrollTop: $("#message").offset().top
   }, 2000);
   $("#message").focus();
+});
+
+$("#retreive").click(function() {
+  fetchPredefined("https://discord.com/api/webhooks/" + $('#url').val())
 });
