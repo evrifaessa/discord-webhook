@@ -1,7 +1,7 @@
 # discord-webhook.js.org (beta)
 A minimal online application to interact with Discord webhooks easily
 
-<a href="https://discord-webhook.js.org/">![Screenshot](https://i.imgur.com/DUYDxXI.png)</a>
+<a href="https://discord-webhook.js.org/">![Screenshot](https://i.imgur.com/hPx9o8i.png)</a>
 
 <hr>
 
