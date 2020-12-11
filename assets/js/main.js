@@ -23,6 +23,10 @@ $(document).ready(function() {
     if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addListener( updateDarkColorScheme );
   });
 
+$(window).on('load', function() {
+    $('.preloader').fadeOut('slow');
+});
+
 $('#main-form').on('submit', function(e) {
     e.preventDefault();
     var url = $('#url').val();
