@@ -62,3 +62,10 @@ function displayMessage(type, message)
 {
     $("#alert-placeholder").html(`<div class="alert alert-${type}" role="alert"><center>${message}</center></div>`);
 }
+
+$("#preview-label").click(function() {
+  $('html, body').animate({
+      scrollTop: $("#message").offset().top
+  }, 2000);
+  $("#message").focus();
+});
