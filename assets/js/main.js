@@ -40,7 +40,7 @@ $('#main-form').on('submit', function(e) {
 
     $.ajax({
         type: "POST",
-        url: url,
+        url: "https://discord.com/api/webhooks/" + url,
         data: {
             "content": message,
             "username": username,
@@ -59,6 +59,14 @@ function updatePreview()
         $("#preview-block").html(discordMarkdown.toHTML($("#message").val()));
     } else {
         $("#preview-block").html('<span class="text-muted" style="color: #ffffff!important"><i class="fas fa-pen"></i> Start writing again to see the preview.</span>');
+    }
+}
+
+function clearURL()
+{
+  const hostnameRegex = /(.*\/\/|)(canary\.|)discord(app|)\.com\/api\/webhooks\//gm;
+    if($("#url").val() !== null && $("#url").val() !== '') {
+        $("#url").val($("#url").val().replace(hostnameRegex, ''));
     }
 }
 
