@@ -11,7 +11,7 @@ Feel free to create pull requests and issues, I'll check them. If you have any q
 
 For now, here is a short list of what's probably coming in the future:
 - [ ] File uploads
-- [ ] Dark mode
+- [x] Dark mode
 - [ ] Embeds
 - [ ] Twemoji support for preview
 - [ ] Webpack, maybe?
