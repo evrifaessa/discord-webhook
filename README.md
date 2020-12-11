@@ -16,4 +16,4 @@ For now, here is a short list of what's probably coming in the future:
 - [ ] Twemoji support for preview
 - [ ] Webpack, maybe?
 - [ ] Better preview, previewing the icon, message, username, everything in Discord's style
-- [ ] Retreive details automatically from webhook's predefined defaults
+- [x] Retreive details automatically from webhook's predefined defaults
