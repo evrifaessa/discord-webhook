@@ -75,3 +75,18 @@
     background-position: center;
     background-size: 125px 125px;
   }
+
+  .bot-tag {
+    background: #7289DA;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff!important;
+    margin-left: 6px;
+    padding: 1px 2px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    line-height: 16px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}

@@ -86,6 +86,15 @@ function updateMarkdownPreview()
     }
 }
 
+function updateUsernamePreview()
+{
+    if($("#username").val() !== null && $("#username").val() !== '') {
+        $("#preview-username").text($("#username").val());
+    } else {
+        $("#preview-username").text("Wumpus");
+    }
+}
+
 /**
   * This function will fetch the predefined values from Discord's API.
   * We'll get the default username, the default icon, and fill in the values of inputs with those information.
@@ -98,7 +107,7 @@ function fetchPredefined(url)
     url: url,
     cache: false,
     success: function(data){
-      if (data["name"]) $("#username").val(data["name"]);
+      if (data["name"]) $("#username").val(data["name"]) && $("#preview-username").text(data["name"]);;
       if (data["avatar"]) $("#icon-url").val(`https://cdn.discordapp.com/avatars/${data["id"]}/${data["avatar"]}.png`) && updateImagePreview(`https://cdn.discordapp.com/avatars/${data["id"]}/${data["avatar"]}.png`);
     }
   });

@@ -56,6 +56,7 @@
             <ul class="list-group mb-3" style="align-items: center;">
               <li class="list-group-item d-flex justify-content-between lh-sm flex-column justify-content-center" style="background-color: #222; color: #ffffff!important;">
                 <img class="rounded-circle z-depth-2" id="preview-image" style="max-width: 125px;" alt="100x100" src="./assets/images/placeholder.png" data-holder-rendered="true">
+                <span align="center"><strong id="preview-username">Wumpus</strong><span class="bot-tag">BOT</span></span>
               </li>
               <br>
               <li id="preview-block" class="list-group-item d-flex justify-content-between lh-sm flex-column justify-content-center" style="background-color: #222; color: #ffffff!important;">
@@ -84,7 +85,7 @@
                   <label for="username" class="form-label">Appearing username</label>
                   <div class="input-group">
                     <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" id="username" placeholder="Clyde" required>
+                    <input type="text" class="form-control" id="username" onkeyup="updateUsernamePreview()" placeholder="Wumpus" required>
                     <div class="invalid-feedback">
                       You need to provide a username.
                     </div>
