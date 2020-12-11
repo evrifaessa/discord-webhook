@@ -1,5 +1,5 @@
 /**
- * Discord-Webhook
+ * discord-webhook
  *
  * @copyright Yağızhan Burak Yakar (https://github.com/evrifaessa)
  * @license   Apache-2.0
@@ -8,6 +8,20 @@
  * This source file is subject to the Apache-2.0 License that is bundled
  * with this source code in the file LICENSE
  */
+
+$(document).ready(function() {
+    function updateDarkColorScheme() {
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        $("body").removeClass('bg-light').addClass("bg-dark");
+      } else {
+        $("body").addClass('bg-light').removeClass("bg-dark");
+      }
+    }
+    // Let's update it on the very first load.
+    updateDarkColorScheme();
+    // and also every time it changes
+    if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addListener( updateDarkColorScheme );
+  });
 
 $('#main-form').on('submit', function(e) {
     e.preventDefault();
@@ -47,33 +61,4 @@ function updatePreview()
 function displayMessage(type, message)
 {
     $("#alert-placeholder").html(`<div class="alert alert-${type}" role="alert"><center>${message}</center></div>`);
-}
-
-const darkSwitch = document.getElementById('darkSwitch');
-window.addEventListener('load', () => {
-  if (darkSwitch) {
-    initTheme();
-    darkSwitch.addEventListener('change', () => {
-      resetTheme();
-    });
-  }
-});
-
-function initTheme() {
-  const darkThemeSelected =
-    localStorage.getItem('darkSwitch') !== null &&
-    localStorage.getItem('darkSwitch') === 'dark';
-  darkSwitch.checked = darkThemeSelected;
-  darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') :
-    document.body.removeAttribute('data-theme');
-}
-
-function resetTheme() {
-  if (darkSwitch.checked) {
-    document.body.setAttribute('data-theme', 'dark');
-    localStorage.setItem('darkSwitch', 'dark');
-  } else {
-    document.body.removeAttribute('data-theme');
-    localStorage.removeItem('darkSwitch');
-  }
 }
