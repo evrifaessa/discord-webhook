@@ -14,6 +14,6 @@ For now, here is a short list of what's probably coming in the future:
 - [x] Dark mode
 - [ ] Embeds
 - [ ] Twemoji support for preview
-- [ ] Webpack, maybe?
+- [ ] express, maybe?
 - [ ] Better preview, previewing the icon, message, username, everything in Discord's style
 - [x] Retreive details automatically from webhook's predefined defaults
