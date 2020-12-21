@@ -1,4 +1,5 @@
 # discord-webhook.js.org (beta)
+[![CodeFactor](https://www.codefactor.io/repository/github/evrifaessa/discord-webhook/badge)](https://www.codefactor.io/repository/github/evrifaessa/discord-webhook)
 A minimal online application to interact with Discord webhooks easily
 
 <a href="https://discord-webhook.js.org/">![Screenshot](https://i.imgur.com/hPx9o8i.png)</a>
