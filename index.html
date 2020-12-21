@@ -72,7 +72,7 @@
                   <label for="url" class="form-label">Webhook address</label>
                   <div class="input-group">
                     <span class="input-group-text">https://discord.com/api/webhooks/</span>
-                    <input type="text" class="form-control" id="url" onkeyup="clearURL();" placeholder="123/abc" required>
+                    <input type="text" class="form-control" id="url" placeholder="123/abc" required>
                     <div class="input-group-append">
                       <button class="btn btn-dark" id="retreive" type="button">Retreive</button>
                     </div>
@@ -85,7 +85,7 @@
                   <label for="username" class="form-label">Appearing username</label>
                   <div class="input-group">
                     <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" id="username" onkeyup="updateUsernamePreview()" placeholder="Wumpus" required>
+                    <input type="text" class="form-control" id="username" placeholder="Wumpus" required>
                     <div class="invalid-feedback">
                       You need to provide a username.
                     </div>
@@ -93,14 +93,14 @@
                 </div>
                 <div class="col-12">
                   <label for="icon-url" class="form-label">Icon URL</label>
-                  <input type="url" class="form-control" id="icon-url" onkeyup="handleIconChange()" placeholder="https://cdn.discordapp.com/avatars/123/icon.png" required>
+                  <input type="url" class="form-control" id="icon-url" placeholder="https://cdn.discordapp.com/avatars/123/icon.png" required>
                   <div class="invalid-feedback">
                     Please enter a valid URL for your webhook's icon.
                   </div>
                 </div>
                 <div class="col-12">
                   <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" onkeyup="updateMarkdownPreview();" rows="3" placeholder="**Hello!** I'm a webhook." required></textarea>
+                  <textarea class="form-control" id="message" rows="3" placeholder="**Hello!** I'm a webhook." required></textarea>
                   <small id="messageHelp" class="form-text text-muted"><a href="https://support.discord.com/hc/en-us/articles/210298617">Markdown</a> is supported for this field.</small>
                   <div class="invalid-feedback">
                     Please enter your message. You can't send a blank webhook.
