@@ -107,7 +107,7 @@ function fetchPredefined(url)
     url: url,
     cache: false,
     success: function(data){
-      if (data["name"]) $("#username").val(data["name"]) && $("#preview-username").text(data["name"]);;
+      if (data["name"]) $("#username").val(data["name"]) && $("#preview-username").text(data["name"]);
       if (data["avatar"]) $("#icon-url").val(`https://cdn.discordapp.com/avatars/${data["id"]}/${data["avatar"]}.png`) && updateImagePreview(`https://cdn.discordapp.com/avatars/${data["id"]}/${data["avatar"]}.png`);
     }
   });
@@ -142,4 +142,20 @@ $("#preview-label").click(function() {
 
 $("#retreive").click(function() {
   fetchPredefined("https://discord.com/api/webhooks/" + $('#url').val())
+});
+
+$( "#url" ).keyup(function() {
+    clearURL();
+});
+
+$( "#username" ).keyup(function() {
+    updateUsernamePreview();
+});
+
+$( "#icon-url" ).keyup(function() {
+    handleIconChange();
+});
+
+$( "#message" ).keyup(function() {
+    updateMarkdownPreview();
 });
