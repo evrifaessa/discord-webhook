@@ -22,3 +22,4 @@ For now, here is a short list of what's probably coming in the not-so-near futur
 - [ ] see if I can drop jQuery
 - [ ] dark mode toggle
 - [ ] UI rewrite
+- [ ] more services?
