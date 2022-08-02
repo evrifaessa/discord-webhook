@@ -9,7 +9,7 @@ A minimal online application to interact with Discord webhooks easily
 
 The application is reachable on [webhook.yagiz.dev](webhook.yagiz.dev), while it only has the ability to send simple messages for now, I'm planning to integrate more advanced use cases like file uploads, embeds, and possibly more. I used jQuery, Font Awesome and Bootstrap in this project.
 
-Feel free to create pull requests and issues, I'll check them. If you have any questions, reach me over [my socials in my website](yagiz.dev).
+Feel free to create pull requests and issues, I'll check them. If you have any questions, reach me over [my socials](https://yagiz.dev) or [hi@yagiz.dev](mailto:hi@yagiz.dev).
 
 For now, here is a short list of what's probably coming in the not-so-near future:
 - [ ] file uploads
