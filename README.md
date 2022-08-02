@@ -21,5 +21,5 @@ For now, here is a short list of what's probably coming in the not-so-near futur
 - [x] retreive details automatically from webhook's predefined defaults (maybe attempt to do that automatically)
 - [ ] see if I can drop jQuery
 - [ ] dark mode toggle
-- [ ] UI rewrite
+- [ ] UI rewrite with Tailwind
 - [ ] more services?
