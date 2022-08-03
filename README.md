@@ -3,7 +3,7 @@
 
 A minimal online application to interact with Discord webhooks easily
 
-[![Screenshot](https://i.imgur.com/hPx9o8i.png)](https://webhook.yagiz.dev)
+[![Screenshot](/assets/screenshot.png)](https://webhook.yagiz.dev)
 
 ***
 
