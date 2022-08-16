@@ -23,3 +23,4 @@ For now, here is a short list of what's probably coming in the not-so-near futur
 - [ ] dark mode toggle
 - [ ] UI rewrite with Tailwind
 - [ ] more services?
+- [ ] make use of Go somewhere in the project because I like the idea?
