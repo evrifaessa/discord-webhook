@@ -1,0 +1,4 @@
+files:
+  - source: /messages/en/*.json
+    translation: /messages/%two_letters_code%/%original_file_name%
+"pull_request_title": "[Automated] Crowdin synchronization"
