@@ -1,4 +1,8 @@
-# webhook.yagiz.dev (beta)
+# webhook.yagiz.dev (Unmaintained)
+**2023 Update:** This was written over 2 years ago. I had a rewrite (possibly using React) in mind, but I just don't have much time anymore. This project is now unmaintained.
+
+-----
+
 [![CodeFactor](https://www.codefactor.io/repository/github/evrifaessa/discord-webhook/badge)](https://www.codefactor.io/repository/github/evrifaessa/discord-webhook)
 
 A minimal online application to interact with Discord webhooks easily
